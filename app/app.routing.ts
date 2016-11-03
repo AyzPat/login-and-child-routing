@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {AuthManager} from './authmanager'
 import { LoginComponent } from './login';
 import { HomeComponent } from './home';
-  import { Home1Component } from './home1';
+  
 import { AboutComponent } from './about';
 import { Link1Component } from './link1';
 import { Link2Component } from './link2';
