@@ -24,13 +24,12 @@ var appRoutes = [
                     { path: 'link1', component: link1_1.Link1Component },
                     { path: 'link2', component: link2_1.Link2Component }
                 ] },
-            { path: '', redirectTo: 'app/home' }
         ]
     },
     { path: 'app/about', redirectTo: 'app/about/link1' },
     { path: 'login', component: login_1.LoginComponent, canActivate: [authmanager_1.AuthManager] },
     { path: 'app', redirectTo: 'app/home' },
-    { path: '**', redirectTo: 'app/home' },
+    //{path:'**', redirectTo:'app/home'},
     { path: '', redirectTo: 'login', pathMatch: 'full' },
     { path: 'app/contact', redirectTo: 'app/contact', canActivate: [authmanager_1.AuthManager] },
 ];
