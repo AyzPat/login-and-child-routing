@@ -1,0 +1,100 @@
+
+  
+
+<!--<div id="loginContainer" >
+  
+    <form id="loginForm" login >
+        <div id="loginHeader">
+            <h3> Login </h3>
+        </div>
+        <input type='text' [(ngModel)]='user.username' name="username" enter-next placeholder=" Username" required/>                    
+        <br>
+        <input type='password' [(ngModel)]="user.password" name="password" placeholder=" Password" required>
+        <br>
+         <div id="loginFooter">
+             <input type='submit' (click)="login()" />
+         </div>
+          <span>{{errorMsg}}</span>
+    </form>
+</div>-->
+<html>
+
+<!--<nav style="font-size:16px" class="navbar navbar-inverse ">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">My Login</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      
+      
+      <li style="
+    margin-left: 1000;
+    color: ivory;"
+ onclick="document.getElementById('id01').style.display='block'" ><a>Login
+     </a>  </li>
+      
+      
+    </ul>
+  </div>
+</nav> 
+
+
+<div  style="margin-top:100px;">
+<div>
+  
+  <div>
+   
+    <h1 class="text" > Hey 
+    </h1>
+
+    <hr  style="margin:auto;width:40%">
+
+    <p class="text" style="font-size:14px" >
+  Hav A Grt Time
+      </p>
+   
+  </div>
+ 
+</div>
+</div>
+
+
+
+
+
+
+
+<div id="id01" class="modal">-->
+  
+  <form class="modal-content animate" >
+    <div class="imgcontainer">
+     
+      <img src="login-button.jpg" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container"  style="width:78%;font-size: initial;">
+      
+      <input type="text" [(ngModel)]='user.username' name="username" placeholder="Enter Username"  required>
+<br>
+      
+      <input type="password" [(ngModel)]="user.password" name="password" placeholder="Enter Password" required>
+        
+      <button type="submit" (click)="login()">Login</button>
+      
+    </div>
+   
+    
+  </form>
+<!--</div>-->
+
+<!--<script>
+
+var modal = document.getElementById('id01');
+
+
+
+</script>-->
+
+
+</html>

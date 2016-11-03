@@ -1,0 +1,30 @@
+
+   <div>
+    <nav style="font-size:16px" class="navbar navbar-inverse ">
+  <div class="container-fluid">
+    
+    <ul class="nav navbar-nav">
+      <li class="active"><a routerLink='home'>Home</a></li>
+       <li > <a routerLink='about'>About</a></li>
+        <li > <a routerLink='contact'>Contact</a></li>
+      
+      
+      <!--<li style="
+    margin-left: 900;
+    color: ivory;" ><button  (click)='logout()'>logout</button>
+       </li>
+      -->
+      
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><button class="logout" (click)='logout()'><span class="glyphicon glyphicon-user"></span> Log Out</button></li>
+      
+    </ul>
+  </div>
+</nav> 
+ 
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
+</div>
+
