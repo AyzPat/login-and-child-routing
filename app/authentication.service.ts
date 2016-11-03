@@ -16,19 +16,24 @@ export class User {
 function my(router: Router, res, user) {
     var users = res.json();
                 
-    var authenticatedUser = users.find((u => u.username === user.username)  &&( u => u.password === user.password ));
-    if (authenticatedUser){
+     var authenticatedUser = users.find((u => u.username === user.username)  );
+     var authenticatedpassword = users.find((u => u.password === user.password)  );
+   
+    if (authenticatedUser && authenticatedpassword){
       localStorage.setItem("user", user);
       window.localStorage.setItem('auth_key', user.token);
       router.navigate(['app']);      
       return true;
     }
-    else{
-      alert('wrong credentials');
+   else if(!authenticatedUser) {
+      alert('wrong username');
     return false;
-  }
-}
 
+}
+else if(authenticatedUser && (!authenticatedpassword)) {
+      alert('wrong password');
+}
+}
  
 
 @Injectable()

@@ -21,16 +21,20 @@ var User = (function () {
 exports.User = User;
 function my(router, res, user) {
     var users = res.json();
-    var authenticatedUser = users.find((function (u) { return u.username === user.username; }) && (function (u) { return u.password === user.password; }));
-    if (authenticatedUser) {
+    var authenticatedUser = users.find((function (u) { return u.username === user.username; }));
+    var authenticatedpassword = users.find((function (u) { return u.password === user.password; }));
+    if (authenticatedUser && authenticatedpassword) {
         localStorage.setItem("user", user);
         window.localStorage.setItem('auth_key', user.token);
         router.navigate(['app']);
         return true;
     }
-    else {
-        alert('wrong credentials');
+    else if (!authenticatedUser) {
+        alert('wrong username');
         return false;
+    }
+    else if (authenticatedUser && (!authenticatedpassword)) {
+        alert('wrong password');
     }
 }
 var AuthenticationService = (function () {
