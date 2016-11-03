@@ -29,10 +29,8 @@ var appRoutes = [
     { path: 'app/about', redirectTo: 'app/about/link1' },
     { path: 'login', component: login_1.LoginComponent, canActivate: [authmanager_1.AuthManager] },
     { path: 'app', redirectTo: 'app/home' },
-    //{path:'**', redirectTo:'app/home'},
     { path: '', redirectTo: 'login', pathMatch: 'full' },
     { path: 'app/contact', redirectTo: 'app/contact', canActivate: [authmanager_1.AuthManager] },
 ];
 exports.appRoutingProviders = [];
 exports.routing = router_1.RouterModule.forRoot(appRoutes);
-//# sourceMappingURL=app.routing.js.map
